@@ -16,4 +16,4 @@ run:
 		$(IMG_TAG)
 
 clean:
-	sudo docker rmi `docker images -q $(IMG_TAG)`
+	sudo docker rmi `sudo docker images -q $(IMG_TAG)`
