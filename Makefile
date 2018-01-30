@@ -1,4 +1,4 @@
-IMG := codekoala/pypi
+IMG := t-hsgw/pypi
 TAG := 1.2.1
 IMG_TAG := $(IMG):$(TAG)
 
