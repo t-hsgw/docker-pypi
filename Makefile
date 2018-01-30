@@ -5,10 +5,10 @@ IMG_TAG := $(IMG):$(TAG)
 PYPI ?= /srv/pypi
 
 build:
-	docker build --pull --tag $(IMG_TAG) .
+	sudo docker build --pull --tag $(IMG_TAG) .
 
 run:
-	docker run -it --rm \
+	sudo docker run -it --rm \
 		--name pypi \
 		-h pypi.local \
 		-v $(PYPI):/srv/pypi:rw \
@@ -16,4 +16,4 @@ run:
 		$(IMG_TAG)
 
 clean:
-	docker rmi `docker images -q $(IMG_TAG)`
+	sudo docker rmi `docker images -q $(IMG_TAG)`
