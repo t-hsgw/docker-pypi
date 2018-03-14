@@ -8,7 +8,7 @@ build:
 	sudo docker build --pull --tag $(IMG_TAG) .
 
 run:
-	sudo docker run -it --rm \
+	sudo docker run -itd --rm \
 		--name pypi \
 		-h pypi.local \
 		-v $(PYPI):/srv/pypi:rw \
